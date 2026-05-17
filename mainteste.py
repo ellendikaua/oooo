@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord import app_commands
 import random
 import asyncio
+import os
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -345,5 +346,4 @@ async def on_raw_reaction_remove(payload):
 # -------------------------
 # TOKEN
 # -------------------------
-
-bot.run("MTM4ODUzODA4MzcxMjE3MjA2Mg.GuEbhX.axvhJWTLM25YF8WyyeD9-vQO21rpFVVx_6-K4s")
+bot.run(os.getenv("TOKEN")) 
